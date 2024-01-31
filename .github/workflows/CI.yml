@@ -18,7 +18,7 @@ jobs:
       run: |
         dotnet nuget list source
         dotnet nuget remove source github
-        dotnet nuget add source --username USERNAME --password ${{ secrets.GITHUBPAT }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/WWLx476792/index.json"
+        dotnet nuget add source --username WWLx476792 --password ${{ secrets.GITHUBPAT }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/WWLx476792/index.json"
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
